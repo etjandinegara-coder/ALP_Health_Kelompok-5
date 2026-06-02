@@ -1,6 +1,6 @@
 plugins {
     id 'java'
-    id 'org.springframework.boot' version '4.1.0'
+    id 'org.springframework.boot' version '3.4.3' // Menggunakan Spring Boot 3 versi stabil resmi
     id 'io.spring.dependency-management' version '1.1.7'
 }
 
@@ -9,7 +9,9 @@ version = '0.0.1-SNAPSHOT'
 
 java {
     toolchain {
-        languageVersion = JavaLanguageVersion.of(25)
+        // Disamakan dengan Java 21 yang aktif di MacBook kamu
+        // Jika temanmu punya Java versi lain, Gradle akan otomatis mendownloadkan Java 21 khusus untuk project ini!
+        languageVersion = JavaLanguageVersion.of(21)
     }
 }
 
@@ -30,7 +32,7 @@ dependencies {
     // Spring Data JPA (ORM ke MySQL)
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 
-    // Thymeleaf (template engine — untuk teman kamu nanti)
+    // Thymeleaf (template engine)
     implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 
     // Spring Security (login / JWT)
@@ -47,7 +49,7 @@ dependencies {
     // Jackson (JSON)
     implementation 'com.fasterxml.jackson.core:jackson-databind'
 
-    // Validation
+    // Validation (Menghilangkan error MethodArgumentNotValidException)
     implementation 'org.springframework.boot:spring-boot-starter-validation'
 
     // Test
@@ -55,6 +57,6 @@ dependencies {
     testImplementation 'org.springframework.security:spring-security-test'
 }
 
-tasks.named('test') {
+tasks.named('test') {x
     useJUnitPlatform()
 }
