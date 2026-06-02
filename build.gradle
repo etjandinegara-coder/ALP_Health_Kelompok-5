@@ -9,8 +9,6 @@ version = '0.0.1-SNAPSHOT'
 
 java {
     toolchain {
-        // Disamakan dengan Java 21 yang aktif di MacBook kamu
-        // Jika temanmu punya Java versi lain, Gradle akan otomatis mendownloadkan Java 21 khusus untuk project ini!
         languageVersion = JavaLanguageVersion.of(21)
     }
 }
