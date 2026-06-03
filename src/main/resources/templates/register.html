@@ -122,10 +122,18 @@
 <!-- Login Card -->
 <div class="z-10 w-full max-w-[440px] bg-surface-container-lowest rounded-xl p-stack-lg md:p-10 tonal-layering border border-outline-variant/30">
 <div class="text-center mb-stack-lg">
-<h1 class="font-headline-lg text-headline-lg text-on-surface mb-2">Selamat Datang</h1>
-<p class="font-body-md text-body-md text-on-surface-variant">Masuk ke akun HealthGuide Anda untuk melanjutkan konsultasi kesehatan.</p>
+<h1 class="font-headline-lg text-headline-lg text-on-surface mb-3">Selamat Datang</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Silahkan buat akun HealthGuide Anda untuk melanjutkan konsultasi kesehatan.</p>
 </div>
 <form action="#" class="space-y-stack-md" onsubmit="event.preventDefault(); window.location.href='#dashboard-link-placeholder';">
+  <!-- User Field -->
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-on-surface-variant block ml-1" for="username">Nama User</label>
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline group-focus-within:text-primary transition-colors">person</span>
+<input class="w-full h-12 pl-12 pr-4 bg-surface-container-low border border-outline-variant rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all outline-none font-body-md text-on-surface placeholder:text-outline" id="username" name="username" placeholder="Masukkan nama user" required="" type="text"/>
+</div>
+</div>
 <!-- Email Field -->
 <div class="space-y-2">
 <label class="font-label-md text-label-md text-on-surface-variant block ml-1" for="email">Alamat Email</label>
@@ -138,7 +146,6 @@
 <div class="space-y-2">
 <div class="flex justify-between items-center px-1">
 <label class="font-label-md text-label-md text-on-surface-variant" for="password">Kata Sandi</label>
-<a class="font-label-md text-label-md text-primary hover:underline transition-all" href="#">Lupa password?</a>
 </div>
 <div class="relative group">
 <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline group-focus-within:text-primary transition-colors">lock</span>
@@ -156,7 +163,7 @@
 <!-- CTA Button -->
 <div class="pt-4">
 <a class="w-full h-12 bg-primary text-on-primary font-label-md text-label-md font-semibold rounded-lg hover:bg-primary-container transition-all shadow-md hover:shadow-lg active:scale-[0.98] flex items-center justify-center gap-2" href="Akun.html" type="submit">
-                        Masuk
+                        Buat Akun
                         <span class="material-symbols-outlined text-[18px]">login</span>
 </a>
 </div>
@@ -179,8 +186,8 @@ Masuk dengan Google
 </form>
 <div class="mt-stack-lg text-center">
 <p class="font-body-md text-body-md text-on-surface-variant">
-                    Belum punya akun? 
-                    <a href="Register.html" class="text-primary font-semibold hover:underline transition-all" href="#">Daftar sekarang</a>
+                    Sudah punya akun? 
+                    <a href="login.html" class="text-primary font-semibold hover:underline transition-all" href="#">Login sekarang</a>
 </p>
 </div>
 </div>
